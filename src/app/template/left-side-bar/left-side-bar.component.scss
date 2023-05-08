@@ -1,0 +1,34 @@
+.leftsidebar {
+    position: fixed;
+    margin-top: 210px;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.leftsidebar nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.leftsidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.leftsidebar li {
+    padding: 10px;
+}
+
+.leftsidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.leftsidebar a:hover {
+    background-color: #ddd;
+}

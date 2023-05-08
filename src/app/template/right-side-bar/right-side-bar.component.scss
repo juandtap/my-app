@@ -1,0 +1,34 @@
+.rightsidebar {
+    position: fixed;
+    padding-top: 210px;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f2f2f2;
+  }
+  
+  .rightsidebar nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .rightsidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .rightsidebar li {
+    padding: 10px;
+  }
+  
+  .rightsidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .rightsidebar a:hover {
+    background-color: #ddd;
+  }
+  
