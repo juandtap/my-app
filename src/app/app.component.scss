@@ -1,3 +1,7 @@
+.main-component{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .header-component {
     position: fixed;
     display: block;
@@ -20,6 +24,13 @@
   }
 
 .left-side-component{
+    
+    position: fixed;
+    margin-top: 227px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    
     
 }
   
