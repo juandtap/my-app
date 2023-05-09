@@ -9,6 +9,7 @@ import { LeftSideBarComponent } from './template/left-side-bar/left-side-bar.com
 import { RightSideBarComponent } from './template/right-side-bar/right-side-bar.component';
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
     LeftSideBarComponent,
     RightSideBarComponent,
     ContactListComponent,
-    SettingsComponent
+    SettingsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

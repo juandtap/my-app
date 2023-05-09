@@ -26,7 +26,7 @@
 .left-side-component{
     
     position: fixed;
-    margin-top: 227px;
+    //margin-top: 227px;
     left: 0;
     width: 200px;
     height: 100%;
@@ -37,11 +37,19 @@
 .right-side-component{
     
     position: fixed;
-    margin-top: 227px;
+    //margin-top: 227px;
     right: 0;
     width: 250px;
     height: 100%;
         
       
 }
-  
+
+.pages-component{
+    
+    margin-top: 230px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 250px;
+    padding: 10px 20px;
+}
