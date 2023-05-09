@@ -1,24 +1,26 @@
-.header-container {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #333;
-    border: solid #000 2px;
-    top:0;
-    padding-top: 20px;
-    width: 100%;
-    height: 200px;
-    z-index: 999;
-  }
-  
+.header-container{
+  display: block;
+  margin: 0 auto;
+  background-color: #333;
+  border: solid #000 2px;
+  text-align: center;
+}
+
+
+.header-logo{
+    display: block;
+    margin: 0 auto;
+}
+
   .header-logo img {
     width: 150px;
     height: 100px;
   }
   
   .header-title {
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+    // float: center;
+    // text-align: center;
     color: white;
   }
