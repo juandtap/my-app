@@ -4,12 +4,12 @@
 
   <form action="" method="">
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+    <input type="text" id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre">
   
     <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="Tu correo electrónico">
+    <input type="email" id="email" name="email" [(ngModel)]="contact.cedula" placeholder="Tu correo electrónico">
   
-    <button type="submit">Enviar</button>
+    <button type="submit" (click)="guardar()" >Enviar</button>
   </form>
   
 </div>

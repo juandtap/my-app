@@ -1,5 +1,6 @@
 .main-component{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 .header-component {
@@ -28,7 +29,7 @@
     
     position: fixed;
     
-    margin-top: auto;
+    //margin-top: auto;
    
     left: 0;
     width: 250px;
@@ -50,9 +51,9 @@
 
 .pages-component{
     
-    margin-top: 200px;
+    margin-top: 168px;
     margin-bottom: 45px;
     margin-left: 250px;
     margin-right: 250px;
-    padding: 10px 20px;
+    padding: 5px 20px;
 }

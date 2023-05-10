@@ -14,8 +14,4 @@ export class HeaderComponent {
 
   }
 
-  addContact(){
-    this.router.navigate(["pages/contactform"])
-
-  }
 }

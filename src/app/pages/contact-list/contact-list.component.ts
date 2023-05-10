@@ -9,7 +9,6 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contact-list.component.scss']
 })
 export class ContactListComponent {
-    
   contact_list : Contact[] = []
   constructor(private contactService : ContactService, private router : Router){
     this.contact_list = contactService.getList()
@@ -26,5 +25,6 @@ export class ContactListComponent {
 
     this.router.navigate(['pages/contactform'], params)
   }
+  
 
 }
