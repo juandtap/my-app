@@ -1,0 +1,21 @@
+<div class="contact-form-container">
+
+    <h3> Contacto: </h3>
+  
+    <form action="" method="">
+
+        <label for="cedula">Cedula:</label>
+      <input type="text" id="cedula" [(ngModel)]="contact.cedula" name="cedula" placeholder="Tu cedula">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre">
+        
+        
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" [(ngModel)]="contact.direccion" name="email" placeholder="Tu correo electrónico">
+    
+      <button type="submit" (click)="guardar()" >Enviar</button>
+    </form>
+    
+  </div>
