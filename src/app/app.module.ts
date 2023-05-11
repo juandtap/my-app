@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 
 import { FormsModule } from '@angular/forms';
+import { EditContactComponent } from './pages/edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     SettingsComponent,
     HomeComponent,
     AboutComponent,
+    EditContactComponent,
     
   ],
   imports: [

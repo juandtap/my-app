@@ -3,13 +3,19 @@
   <h3> Contacto: </h3>
 
   <form action="" method="">
+    
+
+    <label for="cedula">Cedula:</label>
+    <input type="text" id="cedula" [(ngModel)]="contact.cedula" name="cedula" placeholder="Tu cedula" [value]="contact.cedula" *ngIf="contact" >
+
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre">
+    <input type="text"    id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre" [value]="contact.nombre" *ngIf="contact" >
   
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" [(ngModel)]="contact.cedula" placeholder="Tu correo electrónico">
+    <label for="direccion">Direccion:</label>
+    <input type="text"  id="direccion" name="direccion" [(ngModel)]="contact.direccion" placeholder="Tu direccion" [value]="contact.direccion" *ngIf="contact"  >
   
-    <button type="submit" (click)="guardar()" >Enviar</button>
+    <button type="submit" (click)="guardar()" >Agregar</button>
+    
   </form>
   
 </div>

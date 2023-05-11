@@ -2,8 +2,26 @@
 
 <span *ngIf="contact_list.length === 0">No existen contactos</span>
 
-<ul>
-  <li *ngFor="let contacto of contact_list">
-    <a (click)="editar(contacto)"> {{contacto.cedula}}  | {{contacto.nombre}}  | {{contacto.direccion}}</a>
-  </li>
-</ul>
+<div>
+  <table>
+      <thead *ngIf="contact_list.length !== 0">
+        <tr>
+          <th>Cedula</th>
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Accion</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contacto of contact_list" >
+          <td>{{contacto.cedula}}</td>
+          <td>{{contacto.nombre}}</td>
+          <td>{{contacto.direccion}}</td>
+          <td> <a (click)="edit(contacto)" id="edit" >editar </a>  &nbsp; <a (click)="delete(contacto)" id="delete" >Eliminar</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+</div>

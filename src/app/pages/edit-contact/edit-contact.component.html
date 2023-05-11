@@ -1,0 +1,21 @@
+<div class="contact-edit">
+
+    <h3>  Actualizar Contacto : </h3>
+  
+    <form action="" method="">
+      
+  
+      <label for="cedula">Cedula:</label>
+      <input type="text" id="cedula" [(ngModel)]="contact.cedula" name="cedula" placeholder="Tu cedula" readonly >
+  
+      <label for="nombre">Nombre:</label>
+      <input type="text"  id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre" >
+    
+      <label for="direccion">Direccion:</label>
+      <input type="text"  id="direccion" name="direccion" [(ngModel)]="contact.direccion" placeholder="Tu direccion" >
+    
+      
+      <button type="submit" (click)="editar(contact)">Actualizar</button>
+    </form>
+    
+  </div>
