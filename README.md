@@ -1,6 +1,7 @@
 # MyApp
-# Ejecuta de esta forma para que se accedido desde otro dispositivo en la misma LAN
-ng serve --host=0.0.0.0 --disable-host-check
+## Ejecuta de esta forma para que se accedido desde otro dispositivo en la misma LAN:
+
+##ng serve --host=0.0.0.0 --disable-host-check
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
