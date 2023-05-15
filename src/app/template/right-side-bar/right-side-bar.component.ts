@@ -21,11 +21,12 @@ export class RightSideBarComponent {
   //     this.contact = params['contact']
   //   }
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService, private router: Router) {}
 
   guardar() {
     console.log(this.contact);
     this.contactService.save(this.contact);
     this.contact = new Contact();
+    this.router.navigate(['pages/contactlist'])
   }
 }

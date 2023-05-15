@@ -10,7 +10,10 @@ export class ContactService {
   constructor() { }
 
   save(contact: Contact){
-    this.contacts.push(contact)
+    if(contact.cedula !== "") {
+      this.contacts.push(contact)
+    } 
+    
   }
 
   getList(){
