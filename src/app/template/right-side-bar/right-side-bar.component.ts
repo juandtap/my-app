@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Route, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Contact } from 'src/app/domain/contact';
 import { Location } from '@angular/common';
 import { ContactService } from 'src/app/services/contact.service';
@@ -21,12 +21,11 @@ export class RightSideBarComponent {
   //     this.contact = params['contact']
   //   }
 
-  constructor(private contactService: ContactService, private router: Router) {}
+  constructor(private contactService: ContactService) {}
 
   guardar() {
     console.log(this.contact);
     this.contactService.save(this.contact);
     this.contact = new Contact();
-    this.router.navigate(['pages/contactlist'])
   }
 }
