@@ -15,6 +15,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { FormsModule } from '@angular/forms';
 import { EditContactComponent } from './pages/edit-contact/edit-contact.component';
 
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { DatabaseFirestore } from './services/database.service';
+import { environment } from 'src/environments/environment.development';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +38,29 @@ import { EditContactComponent } from './pages/edit-contact/edit-contact.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
+
   ],
-  providers: [],
+  providers: [DatabaseFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// function provideFirebaseApp(arg0: () => any): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
+//   throw new Error('Function not implemented.');
+// }
+
+// function getFirestore() {
+//   throw new Error('Function not implemented.');
+// }
+
+// function initializeApp(arg0: any): any {
+//   throw new Error('Function not implemented.');
+// }
+
+// function provideFirestore(arg0: () => void): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
+//   throw new Error('Function not implemented.');
+// }
+

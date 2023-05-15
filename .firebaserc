@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-app-dd34c": {
+      "hosting": {
+        "my-app": [
+          "angular-app-dd34c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-app-dd34c"
+  }
+}
