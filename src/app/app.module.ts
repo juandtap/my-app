@@ -20,6 +20,15 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { DatabaseFirestore } from './services/database.service';
 import { environment } from 'src/environments/environment.development';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +43,7 @@ import { environment } from 'src/environments/environment.development';
     AboutComponent,
     EditContactComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +52,14 @@ import { environment } from 'src/environments/environment.development';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
-
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatTableModule,
   ],
   providers: [DatabaseFirestore],
   bootstrap: [AppComponent]
