@@ -1,52 +1,72 @@
 import { Injectable } from '@angular/core';
 import { Contact } from '../domain/contact';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/compat/firestore';
+import { DocumentReference } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
+  private dbPath = "/contactos";
   contacts : Contact[] = [];
-  contact_shared : Contact = new Contact;
-  constructor() { }
+  contactRef:AngularFirestoreCollection<Contact>;
+  //contact_shared : Contact = new Contact;
+  constructor(private db: AngularFirestore) {
+    this.contactRef = this.db.collection(this.dbPath)
+   }
 
   save(contact: Contact){
-    if(contact.cedula !== "") {
-      this.contacts.push(contact)
-    } 
+    
+    this.contacts.push(contact)
+    console.log(this.contacts)
+    this.create(contact)
     
   }
 
-  getList(){
-    return this.contacts
+  getAll(){
+    return this.contactRef.valueChanges()
   }
 
-  setContactToEdit(contact: Contact){
-    this.contact_shared = contact
-    console.log('contacto compartido :'+this.contact_shared.nombre)
+  create(contact : Contact): any{
+    return this.contactRef.add({...contact})
+  }
+  
+  update(id: string, data: any):Promise<void>{
+    return this.contactRef.doc(id).update(data)
   }
 
-  getContactToEdit(){
-      return this.contact_shared
+  delete(id: string): Promise<any>{
+    return this.contactRef.doc(id).delete()
   }
 
-  updateContact(contact : Contact){
-    let index = 0
-    for (let c of this.contacts){
-      if (c.cedula === contact.cedula){
-        this.contacts[index] = contact
-      }
-      index++
-    }
-  }
+  // setContactToEdit(contact: Contact){
+  //   this.contact_shared = contact
+  //   console.log('contacto compartido :'+this.contact_shared.nombre)
+  // }
 
-  deleteContact(contact: Contact){
-    let index = 0
-    for (let c of this.contacts){
-      if (c.cedula === contact.cedula){
-        this.contacts.splice(index,1)
-      }
-      index++
-    }
-  }
+  // getContactToEdit(){
+  //     return this.contact_shared
+  // }
+
+  // updateContact(contact : Contact){
+  //   let index = 0
+  //   for (let c of this.contacts){
+  //     if (c.cedula === contact.cedula){
+  //       this.contacts[index] = contact
+  //     }
+  //     index++
+  //   }
+  // }
+
+  // deleteContact(contact: Contact){
+  //   let index = 0
+  //   for (let c of this.contacts){
+  //     if (c.cedula === contact.cedula){
+  //       this.contacts.splice(index,1)
+  //     }
+  //     index++
+  //   }
+  // }
 
 }

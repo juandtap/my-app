@@ -18,16 +18,17 @@ import { EditContactComponent } from './pages/edit-contact/edit-contact.componen
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-import { DatabaseFirestore } from './services/database.service';
+//import { DatabaseFirestore } from './services/database.service';
 import { environment } from 'src/environments/environment.development';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {  MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field'
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 
 @NgModule({
@@ -60,8 +61,11 @@ import {MatTableModule} from '@angular/material/table';
     MatNativeDateModule,
     MatFormFieldModule,
     MatTableModule,
+    
   ],
-  providers: [DatabaseFirestore],
+  providers: [/*DatabaseFirestore*/
+    {provide: FIREBASE_OPTIONS, useValue: environment.firebase}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,6 @@ export class AboutComponent {
     contactList : Contact[] = []
     columnsNames : String[] = ['Cedula', 'Nombre', 'Direccion']
     constructor(private contactService: ContactService){
-      this.contactList = this.contactService.getList()
+      //this.contactList = this.contactService.getList()
     }
 }

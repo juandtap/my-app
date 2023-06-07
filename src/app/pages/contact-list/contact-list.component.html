@@ -1,10 +1,10 @@
 <h3> Contactos guardados</h3>
 
-<span *ngIf="contact_list.length === 0">No existen contactos</span>
+<span *ngIf="listContactFire.length === 0">No existen contactos</span>
 
 <div>
   <table>
-      <thead *ngIf="contact_list.length !== 0">
+      <thead *ngIf="listContactFire.length !== 0">
         <tr>
           <th>Cedula</th>
           <th>Nombre</th>
@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let contacto of contact_list" >
+        <tr *ngFor="let contacto of listContactFire | async" >
           <td>{{contacto.cedula}}</td>
           <td>{{contacto.nombre}}</td>
           <td>{{contacto.direccion}}</td>

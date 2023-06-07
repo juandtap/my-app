@@ -11,11 +11,11 @@ import { ContactService } from 'src/app/services/contact.service';
 export class EditContactComponent {
     contact: Contact = new Contact
     constructor(private contactService: ContactService, private router: Router){
-      this.contact = this.contactService.getContactToEdit()
+      //this.contact = this.contactService.getContactToEdit()
     }
 
     editar(contact : Contact){
-      this.contactService.updateContact(contact)
+      //this.contactService.updateContact(contact)
       this.router.navigate(['pages/contactlist'])
     }
 }

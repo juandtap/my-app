@@ -21,7 +21,14 @@ export class RightSideBarComponent {
   //     this.contact = params['contact']
   //   }
 
-  constructor(private contactService: ContactService, private router: Router) {}
+  constructor(private contactService: ContactService, private router: Router) {
+    let params = this.router.getCurrentNavigation()?.extras.queryParams;
+    if(params){
+      console.log(params)
+      this.contact = new Contact
+      this.contact = params['contact']
+    }
+  }
 
   guardar() {
     console.log(this.contact);
