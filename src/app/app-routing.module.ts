@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: "pages/editcontact", component : EditContactComponent},
   {path: "pages/productlist", component: ProductListComponent},
   {path: "pages/productform", component: ProductFormComponent},
-  {path: "pages/productedit", component: ProductEditComponent}
+  {path: "pages/productedit", component: ProductEditComponent},
 ];
 
 @NgModule({

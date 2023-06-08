@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { Contact } from 'src/app/domain/contact';
 import { Product } from 'src/app/domain/product';
 import { ProductoService } from 'src/app/services/producto.service';
 

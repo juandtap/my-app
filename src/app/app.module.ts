@@ -33,6 +33,7 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { ProductFormComponent } from './pages/product-form/product-form.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,8 @@ import { ProductEditComponent } from './pages/product-edit/product-edit.componen
     MatNativeDateModule,
     MatFormFieldModule,
     MatTableModule,
+    MatButtonModule,
+    MatIconModule,
     
   ],
   providers: [/*DatabaseFirestore*/

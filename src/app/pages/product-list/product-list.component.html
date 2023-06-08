@@ -1,5 +1,10 @@
 <h3> Lista de Productos</h3>
-<a routerLink="pages/productform">Nuevo Producto</a>
+
+<button mat-button  color="primary" routerLink="/pages/productform">
+  <mat-icon>add</mat-icon>
+  Nuevo producto
+</button>
+
 <span *ngIf="listProductFire.length === 0">No existen contactos</span>
 
 <div>
