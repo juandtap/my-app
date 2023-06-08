@@ -8,6 +8,7 @@ import { EditContactComponent } from './pages/edit-contact/edit-contact.componen
 
 
 const routes: Routes = [
+  {path:"", component: ContactListComponent},
   {path:"pages/contactlist", component: ContactListComponent},
   {path:"pages/settings", component: SettingsComponent},
   {path:"pages/home", component: HomeComponent},
