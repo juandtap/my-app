@@ -3,6 +3,7 @@ import { Contact } from '../domain/contact';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/compat/firestore';
 import { DocumentReference } from 'firebase/firestore';
+import { idToken } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,18 @@ export class ContactService {
   private dbPath = "/contactos";
   contacts : Contact[] = [];
   contactRef:AngularFirestoreCollection<Contact>;
-  //contact_shared : Contact = new Contact;
+  
   constructor(private db: AngularFirestore) {
     this.contactRef = this.db.collection(this.dbPath)
-   }
+  }
+
+// nuevos metodos para guardar en firebase
 
   save(contact: Contact){
     
     this.contacts.push(contact)
     console.log(this.contacts)
+    contact.uid = this.db.createId()
     this.create(contact)
     
   }
@@ -29,14 +33,15 @@ export class ContactService {
   }
 
   create(contact : Contact): any{
-    return this.contactRef.add({...contact})
+    return this.contactRef.doc(contact.uid).set({... contact})
   }
   
   update(id: string, data: any):Promise<void>{
     return this.contactRef.doc(id).update(data)
   }
 
-  delete(id: string): Promise<any>{
+  delete(id: string): Promise<void>{
+    
     return this.contactRef.doc(id).delete()
   }
 

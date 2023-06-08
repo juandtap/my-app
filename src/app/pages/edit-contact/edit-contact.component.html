@@ -6,7 +6,7 @@
       
   
       <label for="cedula">Cedula:</label>
-      <input type="text" id="cedula" [(ngModel)]="contact.cedula" name="cedula" placeholder="Tu cedula" readonly >
+      <input type="text" id="cedula" [(ngModel)]="contact.cedula" name="cedula" placeholder="Tu cedula"  >
   
       <label for="nombre">Nombre:</label>
       <input type="text"  id="nombre" [(ngModel)]="contact.nombre" name="nombre" placeholder="Tu nombre" >
@@ -15,7 +15,7 @@
       <input type="text"  id="direccion" name="direccion" [(ngModel)]="contact.direccion" placeholder="Tu direccion" >
     
       
-      <button type="submit" (click)="editar(contact)">Actualizar</button>
+      <button type="submit" (click)="update(contact)">Actualizar</button>
     </form>
     
   </div>

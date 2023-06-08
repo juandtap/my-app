@@ -20,27 +20,25 @@ export class ContactListComponent {
   }
 
  
-  // editar(contact: Contact){
-  //   console.log("editar "+contact)
-  //   let params: NavigationExtras = {
-  //     queryParams:{
-  //       contact: contact,
-  //     }
-  //   }
-
-  //   this.router.navigate(['pages/contactform'], params)
-  // }
+ 
 
   edit(contact: Contact){
+     
+    console.log("editar "+contact)
+    let params: NavigationExtras = {
+      queryParams:{
+        contactToEdit: contact,
+      }
+    }
+
+    this.router.navigate(['pages/editcontact'], params)
+  
     
-    // console.log("envio el contacto "+contact.nombre+" "+contact.cedula+" "+contact.direccion)
-    // this.contactService.setContactToEdit(contact)
-    // this.router.navigate(['pages/editcontact'])
   }
 
   delete(contact: Contact){
     console.log("contacto a eliminar : "+contact.cedula)
-    this.contactService.delete(contact.cedula)
+    this.contactService.delete(contact.uid)
   }
   
 
