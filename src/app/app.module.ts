@@ -29,6 +29,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatTableModule} from '@angular/material/table';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 
 
 @NgModule({
@@ -43,6 +46,9 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     HomeComponent,
     AboutComponent,
     EditContactComponent,
+    ProductListComponent,
+    ProductFormComponent,
+    ProductEditComponent,
     
     
   ],

@@ -1,0 +1,27 @@
+<h3> Lista de Productos</h3>
+<a routerLink="pages/productform">Nuevo Producto</a>
+<span *ngIf="listProductFire.length === 0">No existen contactos</span>
+
+<div>
+  <table>
+      <thead *ngIf="listProductFire.length !== 0">
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Accion</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of listProductFire | async" >
+          <td>{{product.code}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td> <a (click)="edit(product)" id="edit" >editar </a>  &nbsp; <a (click)="delete(product)" id="delete" >Eliminar</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+</div>

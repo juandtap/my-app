@@ -8,6 +8,7 @@ import { ContactService } from 'src/app/services/contact.service';
   templateUrl: './edit-contact.component.html',
   styleUrls: ['./edit-contact.component.scss']
 })
+
 export class EditContactComponent {
     contact: Contact = new Contact
     constructor(private contactService: ContactService, private router: Router){
