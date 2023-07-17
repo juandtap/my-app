@@ -1,0 +1,35 @@
+<h3> Lista de Clientes</h3>
+
+<button mat-button  color="primary" routerLink="/pages/crearCliente">
+  <mat-icon>add</mat-icon>
+  Nuevo cliente
+</button>
+
+<span *ngIf="listaClientes.length === 0">No existen clientes</span>
+
+<div>
+  <table>
+      <thead *ngIf="listaClientes.length !== 0">
+        <tr>
+          <th>Cedula</th>
+          <th>Nombre</th>
+          <th>apellido</th>
+          <th>direccion</th>
+          <th>telefono</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listaClientes | async" >
+          <td>{{cliente.cedula}}</td>
+          <td>{{cliente.nombre}}</td>
+          <td>{{cliente.apellido}}</td>
+          <td>{{cliente.direccion}}</td>
+          <td>{{cliente.telefono}}</td>
+          
+        
+        </tr>
+        
+      </tbody>
+    </table> 
+</div>

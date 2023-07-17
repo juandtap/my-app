@@ -8,6 +8,8 @@ import { EditContactComponent } from './pages/edit-contact/edit-contact.componen
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { ProductFormComponent } from './pages/product-form/product-form.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
+import { ClientesComponent } from './pages/clientes/clientes.component';
+import { CrearClienteComponent } from './pages/crear-cliente/crear-cliente.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path: "pages/productlist", component: ProductListComponent},
   {path: "pages/productform", component: ProductFormComponent},
   {path: "pages/productedit", component: ProductEditComponent},
+  {path: "pages/clientList", component: ClientesComponent},
+  {path: "pages/clientForm", component: CrearClienteComponent},
 ];
 
 @NgModule({

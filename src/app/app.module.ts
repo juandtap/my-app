@@ -34,6 +34,9 @@ import { ProductFormComponent } from './pages/product-form/product-form.componen
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { ClientesComponent } from './pages/clientes/clientes.component';
+import { CrearClienteComponent } from './pages/crear-cliente/crear-cliente.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { MatIconModule } from '@angular/material/icon';
     ProductListComponent,
     ProductFormComponent,
     ProductEditComponent,
+    ClientesComponent,
+    CrearClienteComponent,
+    
     
     
   ],
@@ -70,6 +76,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
     
   ],
   providers: [/*DatabaseFirestore*/
