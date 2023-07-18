@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 import { Cliente } from 'src/app/domain/cliente';
 import { ClientesService } from 'src/app/services/clientes.service';
@@ -16,9 +16,6 @@ export class ClientesComponent {
     this.listaClientes = this.clienteService.getAll()
    }
 
-   ngOnInit() {
-    this.listaClientes = this.clienteService.getAll();
-  }
 
    editar(cliente : Cliente){
        console.log("Editar cliente: "+cliente.cedula)
