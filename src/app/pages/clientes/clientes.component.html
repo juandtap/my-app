@@ -1,6 +1,7 @@
-<h3> Lista de Clientes</h3>
+<h2> Lista de Clientes</h2>
+<h3>Clientes recuperados desde backend java</h3>
 
-<button mat-button  color="primary" routerLink="/pages/crearCliente">
+<button mat-button  color="primary" routerLink="/pages/clientForm">
   <mat-icon>add</mat-icon>
   Nuevo cliente
 </button>
@@ -16,7 +17,7 @@
           <th>apellido</th>
           <th>direccion</th>
           <th>telefono</th>
-          
+          <th>Opciones</th>
         </tr>
       </thead>
       <tbody>
@@ -26,7 +27,7 @@
           <td>{{cliente.apellido}}</td>
           <td>{{cliente.direccion}}</td>
           <td>{{cliente.telefono}}</td>
-          
+          <td> <a (click)="editar(cliente)"  id="edit"> editar</a> &nbsp; <a (click)="eliminar(cliente)"  id="delete">eliminar</a></td>
         
         </tr>
         

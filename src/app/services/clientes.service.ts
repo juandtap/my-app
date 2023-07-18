@@ -18,11 +18,18 @@ export class ClientesService {
 
 
   save(cliente: Cliente)  {
+    console.log("Servicio POST")
+    console.log("cliente: "+cliente)
     return this.http.post<any>(urlbase, cliente)
   }
 
   getAll(){
       return this.http.get<Cliente[]>(urlbase+"clientes")
+  }
+
+  delete(cliente: Cliente){
+    console.log("Metodo DELETE: "+cliente.cedula)
+    return this.http.delete<any>(urlbase+"clientes/"+cliente.cedula)
   }
 
 }

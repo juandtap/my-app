@@ -1,1 +1,25 @@
-<p>crear-cliente works!</p>
+<h3> Cliente: </h3>
+
+  <form action="" method="">
+    
+
+    <label for="cedula">Cedula:</label>
+    <input type="text" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" placeholder="Cedula" [value]="cliente.cedula"
+      *ngIf="cliente" (keyup)="validarCedula()" #cedulaInput>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text"    id="nombre" [(ngModel)]="cliente.nombre" name="nombre" placeholder="Nombre" [value]="cliente.nombre" *ngIf="cliente" >
+  
+    <label for="apellido">Apellido:</label>
+    <input type="text"  id="apellido" name="apellido" [(ngModel)]="cliente.apellido" placeholder="Apellido" [value]="cliente.apellido" *ngIf="cliente"  >
+
+    <label for="direccion">Direccion:</label>
+    <input type="text"  id="direccion" name="direccion" [(ngModel)]="cliente.direccion" placeholder="Direccion" [value]="cliente.direccion" *ngIf="cliente"  >
+  
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="telefono" name="telefono" [(ngModel)]="cliente.telefono" placeholder="Telefono"
+      [value]="cliente.telefono" *ngIf="cliente" (keyup)="validarTelefono()" #telefonoInput  >
+
+    <button type="submit" (click)="save()" >Agregar</button>
+    
+  </form>
