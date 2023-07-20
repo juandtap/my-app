@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 
 import { Cliente } from 'src/app/domain/cliente';
@@ -9,13 +9,18 @@ import { ClientesService } from 'src/app/services/clientes.service';
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.scss']
 })
-export class ClientesComponent {
+export class ClientesComponent implements OnInit {
    listaClientes:any
 
    constructor(private clienteService: ClientesService, private router: Router){
     this.listaClientes = this.clienteService.getAll()
+   
    }
 
+   ngOnInit(){
+    this.listaClientes = this.clienteService.getAll()
+    
+   }
 
    editar(cliente : Cliente){
        console.log("Editar cliente: "+cliente.cedula)
@@ -33,10 +38,14 @@ export class ClientesComponent {
    eliminar(cliente : Cliente){
       console.log("eliminar cliente")
       this.clienteService.delete(cliente).subscribe(
-        () => console.log("cliente eliminado")
+        () => {
+          this.ngOnInit()
+          console.log("Cliente eliminado")
+        }
+        
       )
 
-      this.reloadPage()
+      
    }
 
    reloadPage(){
